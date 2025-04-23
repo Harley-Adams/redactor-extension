@@ -1,3 +1,77 @@
+# Dependency directories
+node_modules/
+bower_components/
+jspm_packages/
+vendor/
+
+# Build outputs and distribution
+dist/
+build/
+out/
+*.zip
+*.crx
+*.xpi
+
+# Development environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.directory
+.project
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Testing
+coverage/
+.nyc_output/
+.jest/
+
+# Package manager files
+package-lock.json
+yarn.lock
+.yarn-integrity
+.pnp.*
+.yarn/*
+
+# Miscellaneous
+.tmp/
+.cache/
+.sass-cache/
+thumbs.db
+.documentdb/
+*.bak
+*.tmp
+*~
+
+# Secrets and API keys
+*.pem
+*.key
+*.cert
+
 # This .gitignore is appropriate for repositories deployed to GitHub Pages and using
 # a Gemfile as specified at https://github.com/github/pages-gem#conventional
 
