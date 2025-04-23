@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redactor Settings</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 250px;
+            padding: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        textarea {
+            width: 95%;
+            min-height: 80px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>Redactor Settings</h3>
+    <label>
+        <input type="checkbox" id="enableGuidRedaction"> Replace GUIDs
+    </label>
+    <label for="redactList">Strings to Redact (one per line):</label>
+    <textarea id="redactList"></textarea>
+    <button id="applyRedaction">Apply to Current Page</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>

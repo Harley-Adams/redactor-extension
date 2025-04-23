@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Redactor",
+  "version": "1.0",
+  "description": "Redacts specified text and GUIDs on web pages via a popup.",
+  "permissions": [
+    "scripting",
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Run Redactor",
+    "default_popup": "popup.html"
+  },
+  // I'm using the see-no-evil-monkey as an icon from https://openmoji.org/library/emoji-1F648/
+  "icons": {
+    "16": "icons/image16.png",
+    "48": "icons/image48.png",
+    "128": "icons/image128.png"
+  }
+}
