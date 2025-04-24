@@ -5,7 +5,7 @@ if (!window.redactorListenerAdded) {
     window.redactorListenerAdded = true;
 
     const guidRegex = /[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/g;
-    const redactionCache = new Map(); // Renamed from guidMap to better reflect its purpose
+    const redactionCache = new Map();
     let currentSettings = { enableGuid: false, stringsToRedact: [] };
     let guidCounter = 0; // Counter to increment the last digit of the GUID
 
@@ -53,6 +53,7 @@ if (!window.redactorListenerAdded) {
             }
         }
 
+        // Performance optimization: Only update the node if it has changed.
         if (changed) {
             node.nodeValue = value;
         }
@@ -65,6 +66,7 @@ if (!window.redactorListenerAdded) {
             {
                 acceptNode: function(node) {
                     const parent = node.parentElement;
+                    // Skip certain elements, we don't want to mess with page functionality, css or user input.
                     if (parent && (parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE' || parent.isContentEditable)) {
                         return NodeFilter.FILTER_REJECT;
                     }
